@@ -1,7 +1,7 @@
 # cdmo-edw-ingestion
 # Makeup Formulation Data Pipeline Project
 
-This GitHub project is focused on designing and implementing **end-to-end data pipelines** for a makeup formulation company. The goal is to move data from operational source systems into a newly created **Enterprise Data Warehouse (EDW)** for advanced reporting and analysis. 
+This GitHub project example is focused on designing and implementing **end-to-end data pipelines** for a Custom Development and Manufacturing Organization (CDMO) of beauty, personal care, fragrance, and specialty products. The goal is to move data from operational source systems into a newly created **Enterprise Data Warehouse (EDW)** for advanced reporting and analysis. 
 
 ## Workflow Description
 
