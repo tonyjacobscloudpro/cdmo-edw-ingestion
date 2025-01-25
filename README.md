@@ -6,7 +6,12 @@ This GitHub project example is focused on designing and implementing **end-to-en
 ## Workflow Description
 
 ### 1. Data Extraction and Landing
-- Extracts raw data (e.g., CSV/JSON files) from source systems or APIs.
+- Extract raw data (e.g., CSV/JSON files) from source systems or APIs.
+  - ProductFormula
+  - ManufactureBatch
+  - CustomerFeedBack
+  - SalesData
+  - SupplierInformation
 - Stores the raw data in a **Landing Container** (e.g., Azure Blob Storage).
 
 ### 2. Data Transformation and Conformance
