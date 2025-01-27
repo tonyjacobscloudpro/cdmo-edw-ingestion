@@ -61,7 +61,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - Transformations: Applied basic Silver layer transformations (e.g., trimming, adding timestamps).
 - [View code to load data into Silver using metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/04-load-silver-layer.ipynb)
 
-### Step 8. Load Gold Layr
+### Step 7. Load Gold Layer
 - Processes Silver layer data sets and transforming them into the Gold layer.
 - Each dataset is processed according to transformations defined for the Gold layer, leveraging a metadata configuration file stored in the ADLS config container.
 - Gold layer transformations add value by enriching and aggregating data for analytics-ready tables.
