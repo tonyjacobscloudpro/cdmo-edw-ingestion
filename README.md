@@ -1,9 +1,28 @@
 # cdmo-edw-ingestion
-# Makeup Formulation Data Pipeline Project
+# Data Pipeline with Metadata-Driven Approach POC  (Python/Pyspark)
 
-This GitHub project example is focused on designing and implementing **end-to-end data pipelines** for a Custom Development and Manufacturing Organization (CDMO) of beauty, personal care, fragrance, and specialty products. The goal is to move data from operational source systems into a newly created **Enterprise Data Warehouse (EDW)** for advanced reporting and analysis. Architectural design is based on medallion architecture and is meta-data driven based on configuration file.
+This GitHub project example is focused on designing and implementing **end-to-end data pipelines** for a Custom Development and Manufacturing Organization (CDMO) of beauty, personal care, fragrance, and specialty products. The goal is to move data from operational source systems into a newly created **Enterprise Data Warehouse (EDW)** for advanced reporting and analysis. 
+
+## Technologies Used
+- Azure ADLS
+- Databricks Community Edition
 
 ## Workflow Description
+This implementation demonstrates how to simulate data ingestion and processing through a medallion architecture (Landing, Bronze, Silver, Gold) using a metadata-driven approach. The process utilizes the faker library to generate realistic datasets for testing purposes.
+
+### The main objectives of the code are to:
+- Generate five sample datasets related beauty products using the faker library.
+- Store the datasets in a landing zone (e.g., Azure Data Lake Storage or equivalent).
+- Use a metadata configuration file to dynamically process and route the datasets through the medallion architecture (Landing → Bronze → Silver → Gold).
+
+### Step 1. Create medallion architecture in ADLS
+- Create the required medallion architecture directories in ADLS.
+  - Landing Zone: Receives incoming source files.     
+      - Incoming: Receives incoming files. Files are removed after processing and put into archive. Data is not persisted.
+      - Archive: Consists of all files received. In case we need to reprocess.  All data is persisted.
+  - Bronze Layer: Raw data ingested from source systems into ADLS in Delta format.
+  - Silver Layer: Cleaned and conformed Delta tables in ADLS. Incremental data updates using Delta MERGE.
+  - Gold Layer: Aggregated Delta tables designed for analytics and BI tools.
 
 ### 1. Create sample incoming datasets.
 - Extract raw data (e.g., CSV/JSON files) from source systems or APIs.  I implemented the faker library to create 5 datasets that I'd be able to use as an example for ingesting data through the medallion architecture based on metadata driven config file.
