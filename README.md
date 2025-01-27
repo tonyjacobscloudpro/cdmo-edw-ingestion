@@ -23,6 +23,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
   - Bronze Layer: Raw data ingested from source systems into ADLS in Delta format.
   - Silver Layer: Cleaned and conformed Delta tables in ADLS. Incremental data updates using Delta MERGE.
   - Gold Layer: Aggregated Delta tables designed for analytics and BI tools.
+  - [View code to create containers.](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/00-create-adls-directories.ipynb)
 
 ### 1. Create sample incoming datasets.
 - Extract raw data (e.g., CSV/JSON files) from source systems or APIs.  I implemented the faker library to create 5 datasets that I'd be able to use as an example for ingesting data through the medallion architecture based on metadata driven config file.
