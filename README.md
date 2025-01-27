@@ -86,21 +86,13 @@ This implementation demonstrates how to simulate data ingestion and processing t
 	- DayName: Full name of the day (e.g., "Monday").
 	- IsWeekend: Boolean flag indicating weekends (1 for Saturday/Sunday, 0 otherwise).
 	- IsHoliday: Placeholder for holidays (0 by default, can be updated later).
- - [View code to create date dimension in gold layer](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/05-create-dim-date-gold.ipynb)
+ - [View code to create date dimension in gold layer](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/06-load-gold-layer.ipynb)
 
 ## Key Deliverables
 - **Pipelines**: Data workflows to extract, transform, and load data.
 - **Staging and Production Tables**: Schema definitions for organizing data in the EDW.
 - **Metadata Management**: A system to map and manage source-to-target data flows.
 - **BI-Ready Views**: Pre-defined SQL views for dashboards and executive reports.
-
-## Technologies Used
-This project showcases how to build scalable and automated data pipelines using **Azure services**, including:
-- Azure Data Factory
-- Azure Blob Storage
-- Azure SQL Database
-- Power BI
-- Azure DevOps
 
 ---
 
