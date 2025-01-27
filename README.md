@@ -5,15 +5,18 @@ This GitHub project example is focused on designing and implementing **end-to-en
 
 ## Workflow Description
 
-### 1. Data Extraction and Landing
-- Extract raw data (e.g., CSV/JSON files) from source systems or APIs.
-  - ProductFormula
-  - ManufactureBatch
-  - CustomerFeedBack
-  - SalesData
-  - SupplierInformation
-- Stores the raw data in a **Landing Container** (e.g., Azure Blob Storage).
+### 1. Create sample incoming datasets.
+- Extract raw data (e.g., CSV/JSON files) from source systems or APIs.  I implemented the faker library to create 5 datasets that I'd be able to use as an example for ingesting data through the medallion architecture based on metadata driven config file  The 5 dataset descriptions are below.
+  
+| Dataset              | Description                             | Columns                                                                                          | Frequency | File Format | File Naming Example                   |
+|----------------------|-----------------------------------------|--------------------------------------------------------------------------------------------------|-----------|-------------|---------------------------------------|
+| **ProductFormulations** | Contains details about makeup product formulas. | ProductID, ProductName, Category, FormulationType, PrimaryIngredients, LaunchDate               | Daily    | csv         | `productformula_20250126_081617.csv`  |
+| **ManufactureBatch** | Tracks manufacturing batch details.     | BatchID, ProductID, BatchDate, Quantity, Status                                                 | Daily     | csv         | `manufacturebatch_20250126_081617.csv`|
+| **CustomerFeedBack** | Collects reviews and feedback about products. | FeedbackID, ProductID, CustomerID, Rating, Comments, FeedbackDate                               |   Daily     | csv         | customerfeedback_20250126_081617.csv                                   |
+| **SalesData**        | Tracks sales across regions.            | OrderID, CustomerID, ProductID, Quantity, TotalAmount, OrderDate                                | Daily       | csv         | sales_20250126_081617.csv                                 |
+| **SupplierInformation** | Contains supplier data for raw materials. | SupplierID, SupplierName, Material, Cost, DeliveryDate                                          | Daily       | csv         | supplier_20250126_081617.csv                                  |
 
+ 
 ### 2. Data Transformation and Conformance
 - Processes raw data to **clean, standardize, and transform** it (e.g., normalize date formats, clean invalid entries).
 - Saves the conformed data in a **Staging Container** or **Staging Tables**.
