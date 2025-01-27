@@ -43,9 +43,8 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - A configuration file (metadata_config_<date>.csv) is created and uploaded to the config container in ADLS.This file drives the ingestion and transformation of datasets across the layers of the medallion architecture.
 - [View config file creation code](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/02-create-metadata-driven-config-file.ipynb)
 
-### 3. Data Warehouse Loading
-- Loads conformed data from staging tables into the **EDW's production tables**.
-- Uses **metadata tables** to dynamically manage and automate the data loading process.
+### Step 4. Load bronze layer
+- The data from the landing zone is processed and ingested into a clean, schema-conformed Delta table format.
 
 ### 4. Business Intelligence Views
 - Creates **operational views** for business users, enabling them to visualize insights using BI tools like **Power BI**.
