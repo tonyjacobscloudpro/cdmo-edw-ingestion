@@ -59,7 +59,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - Silver Layer (Conformance Container):
 - Cleanses and standardizes data, enforcing conformance rules and schemas.
 - Transformations: Applied basic Silver layer transformations (e.g., trimming, adding timestamps).
-- [View code to load data into Silver using metadata config file]()
+- [View code to load data into Silver using metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/04-load-silver-layer.ipynb)
 
 ## Key Deliverables
 - **Pipelines**: Data workflows to extract, transform, and load data.
