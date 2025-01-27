@@ -41,7 +41,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
  
 ### Step 3. Create metadata driven config file
 - A configuration file (metadata_config_<date>.csv) is created and uploaded to the config container in ADLS.This file drives the ingestion and transformation of datasets across the layers of the medallion architecture.
-- [View config file creation code](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/02-create-metadata-driven-config-file.ipynb)
+- [View code to create metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/02-create-metadata-driven-config-file.ipynb)
 
 ### Step 4. Load bronze layer
 - The data from the landing zone is processed and ingested into a clean, schema-conformed Delta table format.
