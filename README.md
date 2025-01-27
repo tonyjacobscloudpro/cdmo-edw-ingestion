@@ -62,8 +62,20 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - [View code to load data into Silver using metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/04-load-silver-layer.ipynb)
 
 ### Step 7. Create/Load Date Dimension in Gold Layer
-- Silver Layer (Conformance Container):
-- Cleanses and standardizes data, enforcing conformance rules and schemas.
+- Columns in the Date Dimension:
+	- DateKey: Unique key for each date in YYYYMMDD format.
+	- Date: Actual date.
+	- Year: Year of the date.
+	- Quarter: Quarter of the year (1–4).
+	- Month: Month number (1–12).
+	- MonthName: Full month name (e.g., "January").
+	- Week: ISO week number of the year.
+	- Day: Day of the month.
+	- DayOfWeek: Day of the week (1=Monday, 7=Sunday).
+	- DayName: Full name of the day (e.g., "Monday").
+	- IsWeekend: Boolean flag indicating weekends (1 for Saturday/Sunday, 0 otherwise).
+	- IsHoliday: Placeholder for holidays (0 by default, can be updated later).
+ - [View code to create date dimension in gold layer]()
 
 ## Key Deliverables
 - **Pipelines**: Data workflows to extract, transform, and load data.
