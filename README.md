@@ -45,8 +45,8 @@ This implementation demonstrates how to simulate data ingestion and processing t
 ### Step 4. Landing Zone
 - Running the code in step 2 will generate 5 daily files and upload them into the landing zone for processing.
 - Landing Zone: Consists of 2 directories.  
-      - Incoming: Receives incoming files that are to be processed. These files are moved to Archive after processing and this folder will be empty.
-      - Archive: Consists of all files received and processed. In case we need to reprocess.  All data is persisted.
+  - Incoming: Receives incoming files that are to be processed. These files are moved to Archive after processing and this folder will be empty.
+  - Archive: Consists of all files received and processed. In case we need to reprocess.  All data is persisted.
 
 ### Step 5. Load Bronze Layer
 - The data from the landing zone is processed and ingested into a clean, schema-conformed Delta table format.
