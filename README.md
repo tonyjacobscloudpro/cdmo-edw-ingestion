@@ -53,7 +53,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - The metadata_config_20250127.csv file contains the source to target mapping.
 - Timestamp is appended to each record
 - Filename is appened to each record
-- [View code to load data into Bronze using metadata config file](
+- [View code to load data into Bronze using metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/03-load-bronze-layer.ipynb)
 
 ### 5. Version Control and Automation
 - All scripts and pipelines are **version-controlled** in the repository.
