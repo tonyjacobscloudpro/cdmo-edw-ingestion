@@ -61,7 +61,18 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - Transformations: Applied basic Silver layer transformations (e.g., trimming, adding timestamps).
 - [View code to load data into Silver using metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/04-load-silver-layer.ipynb)
 
-### Step 7. Create/Load Date Dimension in Gold Layer
+### Step 8. Load Gold Layr
+- Processes Silver layer data sets and transforming them into the Gold layer.
+- Each dataset is processed according to transformations defined for the Gold layer, leveraging a metadata configuration file stored in the ADLS config container.
+- Gold layer transformations add value by enriching and aggregating data for analytics-ready tables.
+	- customerfeedback: Adds a derived column Sentiment based on customer ratings.
+	- manufacturebatch: Maps batch Status to BatchStatus with descriptive labels (Completed -> Closed).
+	- productformula: Combines primary ingredients into a PrimaryIngredientList.
+	- sales: Computes TotalRevenue as Quantity * TotalAmount.
+	- supplier: Concatenates SupplierName and Material into a SupplierDetails field.
+- [View code to load data into Gold using metadata config file]()
+  
+### Step 8. Create/Load Date Dimension in Gold Layer
 - Columns in the Date Dimension:
 	- DateKey: Unique key for each date in YYYYMMDD format.
 	- Date: Actual date.
