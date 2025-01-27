@@ -25,7 +25,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
   - Gold Layer: Aggregated Delta tables designed for analytics and BI tools.
 - [View code to create containers.](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/00-create-adls-directories.ipynb)
 
-### Step 2. Create sample incoming datasets.
+### Step 2. Create sample incoming datasets
 - Extract raw data (e.g., CSV/JSON files) from source systems or APIs.  I implemented the faker library to create 5 datasets that I'd be able to use as an example for ingesting data through the medallion architecture based on metadata driven config file.
 - The 5 dataset descriptions are below.
 - [View code to create fake/mock datasets](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/01-cdmo-datasets-creation.ipynb)
@@ -49,8 +49,11 @@ This implementation demonstrates how to simulate data ingestion and processing t
   - Archive: Consists of all files received and processed. In case we need to reprocess.  All data is persisted.
 
 ### Step 5. Load Bronze Layer
-- The data from the landing zone is processed and ingested into a clean, schema-conformed Delta table format.
+- The data from the landing zone is processed and ingested into a clean, schema-conformed Delta table format in bronze layer.
 - The metadata_config_20250127.csv file contains the source to target mapping.
+- Timestamp is appended to each record
+- Filename is appened to each record
+- [View code to load data into Bronze using metadata config file](
 
 ### 5. Version Control and Automation
 - All scripts and pipelines are **version-controlled** in the repository.
