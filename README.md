@@ -55,9 +55,11 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - Filename is appened to each record
 - [View code to load data into Bronze using metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/03-load-bronze-layer.ipynb)
 
-### 5. Version Control and Automation
-- All scripts and pipelines are **version-controlled** in the repository.
-- Supports **automated deployment and execution** using Azure Data Factory and Azure DevOps.
+### Step 6. Load Silver Layer
+- Silver Layer (Conformance Container):
+- Cleanses and standardizes data, enforcing conformance rules and schemas.
+- Transformations: Applied basic Silver layer transformations (e.g., trimming, adding timestamps).
+- [View code to load data into Silver using metadata config file]()
 
 ## Key Deliverables
 - **Pipelines**: Data workflows to extract, transform, and load data.
