@@ -75,7 +75,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
 	- DayName: Full name of the day (e.g., "Monday").
 	- IsWeekend: Boolean flag indicating weekends (1 for Saturday/Sunday, 0 otherwise).
 	- IsHoliday: Placeholder for holidays (0 by default, can be updated later).
- - [View code to create date dimension in gold layer]()
+ - [View code to create date dimension in gold layer](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/05-create-dim-date-gold.ipynb)
 
 ## Key Deliverables
 - **Pipelines**: Data workflows to extract, transform, and load data.
