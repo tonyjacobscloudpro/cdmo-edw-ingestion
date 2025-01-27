@@ -39,9 +39,9 @@ This implementation demonstrates how to simulate data ingestion and processing t
 | **SupplierInformation** | Contains supplier data for raw materials. | SupplierID, SupplierName, Material, Cost, DeliveryDate                                          | Daily       | csv         | supplier_20250126_081617.csv                                  |
 
  
-### 2. Data Transformation and Conformance
-- Processes raw data to **clean, standardize, and transform** it (e.g., normalize date formats, clean invalid entries).
-- Saves the conformed data in a **Staging Container** or **Staging Tables**.
+### Step 3. Create metadata driven config file
+- A configuration file (metadata_config_<date>.csv) is created and uploaded to the config container in ADLS.This file drives the ingestion and transformation of datasets across the layers of the medallion architecture.
+- [View config file creation code](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/02-create-metadata-driven-config-file.ipynb)
 
 ### 3. Data Warehouse Loading
 - Loads conformed data from staging tables into the **EDW's production tables**.
