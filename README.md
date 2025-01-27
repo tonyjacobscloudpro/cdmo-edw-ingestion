@@ -61,6 +61,10 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - Transformations: Applied basic Silver layer transformations (e.g., trimming, adding timestamps).
 - [View code to load data into Silver using metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/04-load-silver-layer.ipynb)
 
+### Step 7. Create/Load Date Dimension in Gold Layer
+- Silver Layer (Conformance Container):
+- Cleanses and standardizes data, enforcing conformance rules and schemas.
+
 ## Key Deliverables
 - **Pipelines**: Data workflows to extract, transform, and load data.
 - **Staging and Production Tables**: Schema definitions for organizing data in the EDW.
