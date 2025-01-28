@@ -25,7 +25,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
   - Bronze Layer: Raw data ingested from source systems into ADLS in Delta format.  
   - Silver Layer: Cleaned and conformed Delta tables in ADLS. Incremental data updates using Delta MERGE.
   - Gold Layer: Aggregated Delta tables designed for analytics and BI tools.
-- [View ARM Template code](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/arm_template_create_infrastructure.json)
+- [View ARM Template code](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/00_arm_template_create_infrastructure.json)
 
 ### Step 2. Create a SAS Token in storage account for Notebooks to Access
 - Create SAS Token
