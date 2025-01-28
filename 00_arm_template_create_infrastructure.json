@@ -20,6 +20,7 @@
             },
             "kind": "StorageV2",
             "properties": {
+                "isHnsEnabled": true,  // Enable hierarchical namespace for ADLS Gen2
                 "dnsEndpointType": "Standard",
                 "defaultToOAuthAuthentication": false,
                 "publicNetworkAccess": "Enabled",
