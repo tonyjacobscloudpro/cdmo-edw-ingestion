@@ -4,16 +4,24 @@
 This GitHub project example is focused on designing and implementing end-to-end data pipeline for a **Custom Development and Manufacturing Organization (CDMO) of beauty, personal care, fragrance, and specialty products.** The goal is to move data from operational source systems into a newly created **Enterprise Data Warehouse (EDW)** for advanced reporting and analysis. 
 
 ## Technologies Used
+- ARM Template
 - Azure ADLS
-- Databricks Community Edition
+  - SAS Token
+- Notebooks
 
 ## Workflow Description
-This implementation demonstrates how to simulate data ingestion and processing through a medallion architecture (Landing, Bronze, Silver, Gold) using a metadata-driven approach. The process utilizes the faker library to generate realistic datasets for testing purposes.
+This implementation demonstrates how to simulate data ingestion and processing through a medallion architecture (Landing, Bronze, Silver, Gold) using a metadata-driven approach. The process utilizes the faker library to generate realistic datasets for testing purposes and a SAS Token to access ADLS.
 
 ### The main objectives of the code are to:
 - Generate five sample datasets related to beauty industry products using the faker library.
 - Store the datasets in a landing zone (e.g., Azure Data Lake Storage or equivalent).
 - Use a metadata configuration file to dynamically process and route the datasets through the medallion architecture (Landing → Bronze → Silver → Gold).
+
+### Step 1. Deploy the ARM Template to create a resource group with the required ADLS Storage Account and Containers
+- Creates resource group named 'cdmo_poc_rg'
+- Creates the following direc
+
+### Step 2. Create a SAS Token in storage account for Notebooks to Access
 
 ### Step 1. Create medallion architecture in ADLS
 - Create the required medallion architecture directories in ADLS.
