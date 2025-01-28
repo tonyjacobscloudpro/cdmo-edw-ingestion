@@ -27,6 +27,8 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - [View ARM Template code](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/arm_template_create_infrastructure.json)
 
 ### Step 2. Create a SAS Token in storage account for Notebooks to Access
+- Create SAS Token
+- Token will be added to notebooks code for adls access
 
 ### Step 1. Create medallion architecture in ADLS
 - Create the required medallion architecture directories in ADLS.
