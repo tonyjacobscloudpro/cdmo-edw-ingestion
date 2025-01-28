@@ -18,12 +18,13 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - Use a metadata configuration file to dynamically process and route the datasets through the medallion architecture (Landing → Bronze → Silver → Gold).
 
 ### Step 1. Deploy the ARM Template to a new resource group to automate creation of required ADLS Storage Account and Containers for this project.
-- Creates the following blob containers within the blob service:
-	- 00-landing
-	- 01-bronze
-	- 02-silver
-	- 03-gold
-	- config
+- Creates the following blob containers within the blob service for Medallion Architecture:
+  - Landing Zone: Receives incoming source files and source for archive data. 
+      - Incoming: Incoming files go here. These files are removed after processing and put into archive. Data is not persisted.
+      - Archive: Consists of all files received and processed. This is here in case we need to reprocess.  All data is persisted.
+  - Bronze Layer: Raw data ingested from source systems into ADLS in Delta format.  
+  - Silver Layer: Cleaned and conformed Delta tables in ADLS. Incremental data updates using Delta MERGE.
+  - Gold Layer: Aggregated Delta tables designed for analytics and BI tools.
 - [View ARM Template code](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/arm_template_create_infrastructure.json)
 
 ### Step 2. Create a SAS Token in storage account for Notebooks to Access
@@ -31,14 +32,8 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - Token will be added to notebooks code for adls access
 
 ### Step 1. Create medallion architecture in ADLS
-- Create the required medallion architecture directories in ADLS.
-  - Landing Zone: Receives incoming source files.     
-      - Incoming: Receives incoming files. Files are removed after processing and put into archive. Data is not persisted.
-      - Archive: Consists of all files received. In case we need to reprocess.  All data is persisted.
-  - Bronze Layer: Raw data ingested from source systems into ADLS in Delta format.
-  - Silver Layer: Cleaned and conformed Delta tables in ADLS. Incremental data updates using Delta MERGE.
-  - Gold Layer: Aggregated Delta tables designed for analytics and BI tools.
-- [View code to create containers.](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/00-create-adls-directories.ipynb)
+
+
 
 ### Step 2. Create sample incoming datasets
 - Extract raw data (e.g., CSV/JSON files) from source systems or APIs.  I implemented the faker library to create 5 datasets that I'd be able to use as an example for ingesting data through the medallion architecture based on metadata driven config file.
