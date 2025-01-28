@@ -17,7 +17,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - Store the datasets in a landing zone (e.g., Azure Data Lake Storage or equivalent).
 - Use a metadata configuration file to dynamically process and route the datasets through the medallion architecture (Landing → Bronze → Silver → Gold).
 
-### Step 1. Deploy the ARM Template to create a resource group with the required ADLS Storage Account and Containers
+### Step 1. Deploy the ARM Template to create to a resource group to automate creation of required ADLS Storage Account and Containers for this project.
 - Creates resource group named 'cdmo_poc_rg'
 - Creates the following direc
 
