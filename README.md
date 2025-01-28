@@ -17,7 +17,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
 - Store the datasets in a landing zone (e.g., Azure Data Lake Storage or equivalent).
 - Use a metadata configuration file to dynamically process and route the datasets through the medallion architecture (Landing → Bronze → Silver → Gold).
 
-### Step 1. Deploy the ARM Template to a new resource group to automate creation of required ADLS Storage Account and Containers for this project.
+### Step 1. Deploy the ARM Template to a new resource group to automate creation of Storage Account and Containers for this project.
 - Creates the following blob containers within the blob service for Medallion Architecture:
   - Landing Zone: Receives incoming source files and source for archive data. 
       - Incoming: Incoming files go here. These files are removed after processing and put into archive. Data is not persisted.
