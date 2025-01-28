@@ -34,7 +34,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
 ### Step 3. Create sample incoming datasets
 - Extract raw data (e.g., CSV/JSON files) from source systems or APIs.  I implemented the faker library to create 5 datasets that I'd be able to use as an example for ingesting data through the medallion architecture based on metadata driven config file.
 - The 5 dataset descriptions are below.
-- [View code to create fake/mock datasets](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/01-cdmo-datasets-creation.ipynb)
+- [View code to create fake/mock datasets](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/01-cdmo-datasets-creation.ipynb)
   
 | Dataset              | Description                             | Columns                                                                                          | Frequency | File Format | File Naming Example                   |
 |----------------------|-----------------------------------------|--------------------------------------------------------------------------------------------------|-----------|-------------|---------------------------------------|
