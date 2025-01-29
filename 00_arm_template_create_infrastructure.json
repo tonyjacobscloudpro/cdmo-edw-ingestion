@@ -134,9 +134,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
             "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
                 "defaultEncryptionScope": "$account-encryption-key",
                 "denyEncryptionScopeOverride": false,
                 "publicAccess": "None"
@@ -151,9 +148,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
             "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
                 "defaultEncryptionScope": "$account-encryption-key",
                 "denyEncryptionScopeOverride": false,
                 "publicAccess": "None"
@@ -168,9 +162,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
             "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
                 "defaultEncryptionScope": "$account-encryption-key",
                 "denyEncryptionScopeOverride": false,
                 "publicAccess": "None"
@@ -185,9 +176,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
             "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
                 "defaultEncryptionScope": "$account-encryption-key",
                 "denyEncryptionScopeOverride": false,
                 "publicAccess": "None"
@@ -202,9 +190,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
             "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
                 "defaultEncryptionScope": "$account-encryption-key",
                 "denyEncryptionScopeOverride": false,
                 "publicAccess": "None"
