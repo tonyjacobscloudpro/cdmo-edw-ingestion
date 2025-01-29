@@ -41,11 +41,9 @@
                     "requireInfrastructureEncryption": false,
                     "services": {
                         "file": {
-                            "keyType": "Account",
                             "enabled": true
                         },
                         "blob": {
-                            "keyType": "Account",
                             "enabled": true
                         }
                     },
@@ -61,16 +59,11 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
-            "sku": {
-                "name": "Standard_LRS",
-                "tier": "Standard"
-            },
             "properties": {
                 "cors": {
                     "corsRules": []
                 },
                 "deleteRetentionPolicy": {
-                    "allowPermanentDelete": false,
                     "enabled": false
                 }
             }
@@ -82,10 +75,6 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
-            "sku": {
-                "name": "Standard_LRS",
-                "tier": "Standard"
-            },
             "properties": {
                 "protocolSettings": {
                     "smb": {}
@@ -94,34 +83,7 @@
                     "corsRules": []
                 },
                 "shareDeleteRetentionPolicy": {
-                    "enabled": false,
-                    "days": 0
-                }
-            }
-        },
-        {
-            "type": "Microsoft.Storage/storageAccounts/queueServices",
-            "apiVersion": "2023-05-01",
-            "name": "[concat(parameters('storageAccounts_cdmo_name'), '/default')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
-            ],
-            "properties": {
-                "cors": {
-                    "corsRules": []
-                }
-            }
-        },
-        {
-            "type": "Microsoft.Storage/storageAccounts/tableServices",
-            "apiVersion": "2023-05-01",
-            "name": "[concat(parameters('storageAccounts_cdmo_name'), '/default')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
-            ],
-            "properties": {
-                "cors": {
-                    "corsRules": []
+                    "enabled": false
                 }
             }
         },
@@ -134,11 +96,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
             "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
-                "defaultEncryptionScope": "$account-encryption-key",
-                "denyEncryptionScopeOverride": false,
                 "publicAccess": "None"
             }
         },
@@ -151,11 +108,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
             "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
-                "defaultEncryptionScope": "$account-encryption-key",
-                "denyEncryptionScopeOverride": false,
                 "publicAccess": "None"
             }
         },
@@ -168,11 +120,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
             "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
-                "defaultEncryptionScope": "$account-encryption-key",
-                "denyEncryptionScopeOverride": false,
                 "publicAccess": "None"
             }
         },
@@ -185,28 +132,6 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
             ],
             "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
-                "defaultEncryptionScope": "$account-encryption-key",
-                "denyEncryptionScopeOverride": false,
-                "publicAccess": "None"
-            }
-        },
-        {
-            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-            "apiVersion": "2023-05-01",
-            "name": "[concat(parameters('storageAccounts_cdmo_name'), '/default/config')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_cdmo_name'), 'default')]",
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_cdmo_name'))]"
-            ],
-            "properties": {
-                "immutableStorageWithVersioning": {
-                    "enabled": false
-                },
-                "defaultEncryptionScope": "$account-encryption-key",
-                "denyEncryptionScopeOverride": false,
                 "publicAccess": "None"
             }
         }
