@@ -46,7 +46,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
 
  ### Step 4. Create metadata driven config file
 - A configuration file (metadata_config_<date>.csv) is created and uploaded to the config container in ADLS.This file drives the ingestion and transformation of datasets across the layers of the medallion architecture.
-- [View code to create metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/02-create-metadata-driven-config-file.ipynb)
+- [View code to create metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/02-create-metadata-driven-config-file.ipynb)
 
 ### Step 5. Landing Zone
 - Running the code in step 2 will generate 5 daily files and upload them into the landing zone for processing.
