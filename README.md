@@ -44,17 +44,17 @@ This implementation demonstrates how to simulate data ingestion and processing t
 | **SalesData**        | Tracks sales across regions.            | OrderID, CustomerID, ProductID, Quantity, TotalAmount, OrderDate                                | Daily       | csv         | sales_20250126_081617.csv                                 |
 | **SupplierInformation** | Contains supplier data for raw materials. | SupplierID, SupplierName, Material, Cost, DeliveryDate                                          | Daily       | csv         | supplier_20250126_081617.csv                                  |
 
- ### Step 3. Create metadata driven config file
+ ### Step 4. Create metadata driven config file
 - A configuration file (metadata_config_<date>.csv) is created and uploaded to the config container in ADLS.This file drives the ingestion and transformation of datasets across the layers of the medallion architecture.
 - [View code to create metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/notebooks/02-create-metadata-driven-config-file.ipynb)
 
-### Step 4. Landing Zone
+### Step 5. Landing Zone
 - Running the code in step 2 will generate 5 daily files and upload them into the landing zone for processing.
 - Landing Zone: Consists of 2 directories.  
   - Incoming: Receives incoming files that are to be processed. These files are moved to Archive after processing and this folder will be empty.
   - Archive: Consists of all files received and processed. In case we need to reprocess.  All data is persisted.
 
-### Step 5. Load Bronze Layer
+### Step 6. Load Bronze Layer
 - The data from the landing zone is processed and ingested into a clean, schema-conformed Delta table format in bronze layer.
 - The metadata_config_20250127.csv file contains the source to target mapping.
 - Timestamp is appended to each record
