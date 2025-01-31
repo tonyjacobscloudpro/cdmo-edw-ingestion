@@ -76,7 +76,7 @@ This implementation demonstrates how to simulate data ingestion and processing t
 	- productformula: Combines primary ingredients into a PrimaryIngredientList.
 	- sales: Computes TotalRevenue as Quantity * TotalAmount.
 	- supplier: Concatenates SupplierName and Material into a SupplierDetails field.
-- [View code to load data into Gold using metadata config file]()
+- [View code to load data into Gold using metadata config file](https://github.com/tonyjacobscloudpro/cdmo-edw-ingestion/blob/main/05-load-gold-layer.ipynb)
   
 ### Step 8. Create/Load Date Dimension in Gold Layer
 - Columns in the Date Dimension:
