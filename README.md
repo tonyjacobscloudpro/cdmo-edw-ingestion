@@ -1,4 +1,3 @@
-# cdmo-edw-ingestion
 # Data Pipeline with Metadata-Driven Approach POC  (Python/Pyspark)
 
 This GitHub project example is focused on designing and implementing end-to-end data pipeline for a **Custom Development and Manufacturing Organization (CDMO) of beauty, personal care, fragrance, and specialty products.** The goal is to move data from operational source systems into a newly created **Enterprise Data Warehouse (EDW)** for advanced reporting and analysis. 
